@@ -1,0 +1,28 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-sizing: border-box;
+  padding: var(--component-padding);
+  height: var(--card-height);
+}
+
+.walletSelect {
+  grid-column: 1 / span 1;
+}
+
+.input {
+  grid-column: 2 / span 3;
+}
+
+div.exceedsInput {
+  color: var(--inactive-color);
+}
+
+.balance {
+  grid-column: 1 / span 2;
+}
+
+.info {
+  grid-column: 3 / span 2;
+  justify-self: end;
+}

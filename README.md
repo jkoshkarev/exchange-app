@@ -1,4 +1,39 @@
+# [Currency Exchange app](http://ikoshkarev-exchange.s3-website.eu-west-2.amazonaws.com)
+
+## Features
+
+- 3 wallets: `USD`, `EUR` and `GDP` with predefined amounts
+- choosing source and target wallets
+- swapping wallets
+- exchanging money between wallets
+- updating FX rates every 10s
+- validations: minimal amount to exchange and sufficient balance check
+
+## Tech stack
+
+- React 16.8
+- Redux to manage the state
+- [Redux-saga](https://github.com/redux-saga/redux-saga) to call FX rates API
+- Jest/Enzyme for unit testing
+- SASS as a CSS post processor
+- CSS variables
+- [currency.js](https://currency.js.org/) to deal with floating point numbers
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Configuration
+
+The app exposes the following environment variables:
+
+- `REACT_APP_RATES_API_URL` - [Open Exchange Rates API](https://docs.openexchangerates.org/docs/api-introduction) URL
+- `REACT_APP_RATES_API_POLLING_DELAY_MS` - polling delay in milliseconds (default `10000`)
+- `REACT_APP_RATES_API_CURRENCIES` - currencies to poll (e.g. `USD,EUR,GDP`)
+
+In order to change an env variable run
+
+```bash
+set REACT_APP_RATES_API_URL="..." && npm start
+```
 
 ## Available Scripts
 
@@ -27,42 +62,11 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Possible improvements
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- add API error handling
+- remember recently change amount (source or target) and then, when currencies are swapped, preserve this amount
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Additional inforamtion
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Currency Exchange app is deployed under [Currency Exchange app](http://ikoshkarev-exchange.s3-website.eu-west-2.amazonaws.com)

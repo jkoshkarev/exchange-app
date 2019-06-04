@@ -1,0 +1,24 @@
+body {
+  --card-height: 8.75rem;
+  --component-padding: 1.5rem;
+  --container-background-color: #f3f4f5;
+  --base-background-color: #fff;
+  --highlight-color: #eb008d;
+  --inactive-color: #8b959e;
+  --label-font-size: 0.75rem;
+  --label-font-weight: 300;
+  --primary-color: #2c76e3;
+  --icon-height: 2rem;
+}
+
+.app {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--base-background-color);
+}
+
+.header {
+  text-align: center;
+  font-weight: 500;
+  margin: var(--component-padding) 0 0 0;
+}

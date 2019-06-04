@@ -1,0 +1,12 @@
+.betweenCards {
+  position: absolute;
+  height: var(--icon-height);
+  top: calc(var(--card-height) - var(--icon-height) / 2);
+}
+
+.indicator {
+  --indicator-width: 6.5rem;
+
+  width: var(--indicator-width);
+  left: calc(50% - var(--indicator-width) / 2);
+}

@@ -1,0 +1,27 @@
+.container {
+  animation: fadeIn 1s;
+
+  position: relative;
+  background-color: var(--container-background-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.srcCard {
+  background-color: var(--base-background-color);
+}
+
+.button {
+  padding: 0 var(--component-padding) 1rem var(--component-padding);
+}
+
+.loader {
+  text-align: center;
+}
